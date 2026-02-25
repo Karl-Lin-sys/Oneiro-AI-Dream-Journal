@@ -1,0 +1,7 @@
+{
+  "name": "Oneiro: AI Dream Journal",
+  "description": "Voice-record dreams for AI transcription, surrealist image generation, and Jungian psychological interpretation with a follow-up chat interface.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+:root {
+  --color-bg: #0a0502;
+  --color-accent: #8b5cf6;
+  --glass-surface: rgba(139, 92, 246, 0.05);
+  --glass-border: rgba(139, 92, 246, 0.1);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.atmosphere {
+  background: 
+    radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  filter: blur(60px);
+  opacity: 0.8;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glass-panel {
+  background: var(--glass-surface);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+.serif-text {
+  font-family: var(--font-serif);
+}
+
+.markdown-body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #f8fafc;
+}
+
+.markdown-body h2 {
+  font-size: 1.5rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
+}
+
+.markdown-body p {
+  margin-bottom: 1em;
+  color: #cbd5e1;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+  color: #cbd5e1;
+}
+
+.markdown-body li {
+  margin-bottom: 0.25em;
+}
+
+.markdown-body strong {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
